@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-
 import '../models/item.dart';
 
 class HomePage extends StatelessWidget{
-  HomePage({Key? key}) : super(key: key);
-  final List<Item> items = [
-    Item(name: 'Gulaku 1 kg', price: 12500, image: 'assets/images/gulaku.jpg'),
-    Item(name: 'Garam Cap Kapal', price: 2000, image:'assets/images/garam.jpg'),
-    Item(name: 'Royco Sapi', price: 500, image:'assets/images/RoycoSapi.png'),
-    Item(name: 'Royco Ayam', price: 500, image:'assets/images/RoycoAyam.png'),
-  ];
+  HomePage({Key key}) : super(key: key);
+  Item.fromMap(Map<String, dynamic> map) {
+    this._id = map['id'];
+    this._name = map['name'];
+    this._price = map['price'];
+  }
 
   @override
   Widget build(BuildContext context) {

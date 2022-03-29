@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_jobsheet_navigation_belanja/models/item.dart';
 
 class ItemPage extends StatelessWidget{
-  const ItemPage({Key? key}) : super(key: key);
+  const ItemPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final Item itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
+    final Item itemArgs = ModalRoute.of(context).settings.arguments as Item;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 240, 240, 240),
       body: Center(
