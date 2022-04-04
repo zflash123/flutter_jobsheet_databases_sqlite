@@ -5,6 +5,8 @@ import '../dbhelper.dart';
 import 'entry_form.dart';
 
 class Home extends StatefulWidget {
+  const Home({Key key}) : super(key: key);
+
   @override
   HomeState createState() => HomeState();
 }
