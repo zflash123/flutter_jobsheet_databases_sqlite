@@ -82,19 +82,22 @@ class HomeState extends State<Home> {
                 Text("Price : " + this.itemList[index].price.toString()),
                 SizedBox(
                   height: 5.0,
-                ),                
+                ),
               ],
             ),
             trailing: GestureDetector(
               child: Icon(Icons.delete),
               onTap: () async {
                 //TODO 3 Panggil Fungsi untuk Delete dari DB berdasarkan Item
+                dbHelper.delete(itemList[index].id);
+                updateListView();
               },
             ),
             onTap: () async {
               var item =
                   await navigateToEntryForm(context, this.itemList[index]);
               //TODO 4 Panggil Fungsi untuk Edit data
+              dbHelper.update(item);
             },
           ),
         );
