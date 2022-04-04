@@ -20,7 +20,7 @@ class Item {
   set price(value) => _price = value;
 
   // konstruktor versi 1
-  Item(this._name, this._price);
+  Item(this._name, this._price, int parse, String text);
 
   // konstruktor versi 2: konversi dari Map ke Item
   Item.fromMap(Map<String, dynamic> map) {
