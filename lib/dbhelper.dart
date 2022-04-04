@@ -75,12 +75,12 @@ class DBHelper {
     if (_dbHelper == null) {
       _dbHelper = DBHelper._createObject();
     }
-    return _dbHelper!;
+    return _dbHelper;
   }
   Future<Database> get database async {
     if (_database == null) {
       _database = await initDb();
     }
-    return _database!;
+    return _database;
   }
 }

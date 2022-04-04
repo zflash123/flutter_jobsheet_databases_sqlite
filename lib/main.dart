@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_jobsheet_navigation_belanja/pages/home_page.dart';
-import 'package:flutter_jobsheet_navigation_belanja/pages/item_page.dart';
+import '/pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,16 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Shopping List',
+      title: 'Tambahkan Item',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.blueGrey,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/item': (context) => ItemPage(),
-      },
+      home: Home(),
     );
   }
 }
